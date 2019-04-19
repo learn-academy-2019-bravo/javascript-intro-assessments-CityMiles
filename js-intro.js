@@ -1,5 +1,8 @@
 // Intro to Javascript Assessments
 
+gggggggggggggggggggggggggggggggggggggggggg
+
+
 // Consider this variable:
 
 var mantra = "Be the dev";
