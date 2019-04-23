@@ -1,38 +1,45 @@
-// Intro to Javascript Assessments
 
-gggggggggggggggggggggggggggggggggggggggggg
-
-
-// Consider this variable:
-
-var mantra = "Be the dev";
 
 // 1. Write the code that returns 'B' from mantra.
 
-// 2. Write the code that determines if there is a 'x' in mantra.
+var mantra = 'Be the dev'
+
+console.log(mantra.charAt(0))
+
+
+// 2. Write the code that determines if there is an 'x' in mantra.
+
+console.log(mantra.includes('x'))
+
 
 // 3. Write the code that determines if there is a 'v' in mantra.
 
+console.log(mantra.includes('v'))
+
+
 // Stretch: Write the code that returns the position of 'v' in mantra.
 
+console.log(mantra.indexOf('v'))
 
-// Consider the following statement:
 
-var codingIsEasy
-var imBored
+
+// 4. Update the codingIsEasy and imBored variables above the statement to the values required to log 'I need more!'
+
+var codingIsEasy = true
+var imBored = true
 
 if (codingIsEasy && imBored) {
-    console.log("I need more!")
+    console.log('I need more!')
 } else {
-    console.log("Steady as she goes")
+    console.log('Steady as she goes')
 }
 
-// 4. Update the codingIsEasy and imBored variables above the statement to the values required to log "I need more!"
 
-// Consider the following statement:
 
-var imLost
-var imFrustrated
+// 5. Update the imLost and imFrustated variables above the statement to the values required to log 'Keep coding!'
+
+var imLost = false
+var imFrustrated = false
 
 if (imLost || imFrustrated) {
     console.log('Break time!')
@@ -40,26 +47,56 @@ if (imLost || imFrustrated) {
     console.log('Keep coding!')
 }
 
-// 5. Update the imLost and imFrustated variables above the statement to the values required to log "Keep coding!"
 
-// 6a. Recall the mantra variable from the first question. Write the code that logs each letter of mantra using a for loop.
 
-// Stretch: Using a while loop.
+// 6. Recall the mantra variable from the first question. Write the code that logs each letter of mantra using a for loop.
 
-// Super Stretch: Using forEach().
+for (let i=0; i < mantra.length; i++) {
+  console.log(mantra[i])
+}
 
-// Consider the following variable:
+// Stretch: Using a while loop ....... ??? (finish later)
 
-var message = "thisisateststring"
+// Super Stretch: Using forEach(). ....... ??? (finish later)
+
+
 
 // 7. Write a function that takes a string like message as an argument and returns the string without vowels.
 
-// Stretch: Update your function to throw an exception if the argument is not a string.
+var message = 'thisisateststring'
 
-// Super Duper Stretch: Update your function to throw a TypeError if the argument is not a string.
+function noVowel(string) {
 
-// Consider the following variable:
+  var vowelGone = string.split('')
+  for(let i=0; i < string.length; i++) {
+    if(string[i] != 'a' && string[i] != 'e' && string[i] != 'i' && string[i] != 'o' && string[i] != 'u') {
+      console.log(string[i])
+    }
+  }
+}
+console.log(noVowel(message))
 
-var toonimals = [ {name: 'Itchy', animal: 'mouse'}, {name: 'Stimpy', animal: 'cat'}, {name: 'Daffy', animal: 'duck'}, {name: 'Scratchy', animal: 'cat'}, {name: 'Ren', animal: 'dog'}, {name: 'Felix', animal: 'cat'}]
+// Stretch: Update your function to throw an exception if the argument is not a string ....... ??? (finish later)
+
+// Super Duper Stretch: Update your function to throw a TypeError if the argument is not a string ....... ??? (finish later)
+
+
 
 // 8. Write a function that takes an array like toonimals and returns an array with only the toons that are cats.
+
+var toonimals = [ {name: 'Itchy', animal: 'mouse'},
+{name: 'Stimpy', animal: 'cat'},
+{name: 'Daffy', animal: 'duck'},
+{name: 'Scratchy', animal: 'cat'},
+{name: 'Ren', animal: 'dog'},
+{name: 'Felix', animal: 'cat'} ]
+
+function toonFarm(array) {
+  var toonCat = []
+  for(let i=0; i < array.length; i++) {
+    if(array[{animal: 'cat'}]) {
+      console.log(toonCat.push(array[{i}]))
+    }
+  }
+}
+console.log(toonFarm(toonimals))
